@@ -44,8 +44,6 @@ AI-Resume-Analyzer/
 └── .gitignore
 ```
 
-*Note: Update this structure to match the actual files and folders in your repository.*
-
 ## Getting Started
 
 ### Prerequisites

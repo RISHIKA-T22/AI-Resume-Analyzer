@@ -1,13 +1,14 @@
+import re
 from data.skills_db import SKILLS
-
 
 def extract_skills(text):
     text = text.lower()
-
     found_skills = []
 
     for skill in SKILLS:
-        if skill.lower() in text:
+        pattern = r'(?<!\w)' + re.escape(skill.lower()) + r'(?!\w)'
+
+        if re.search(pattern, text):
             found_skills.append(skill)
 
-    return list(set(found_skills))
+    return sorted(set(found_skills))

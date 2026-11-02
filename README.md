@@ -102,11 +102,8 @@ pip install google-generativeai
 
 **3. Configure the API key**
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root.
 
-```env
-GEMINI_API_KEY=your_api_key_here
-```
 
 The app reads the key with `python-dotenv`. It does **not** use `.streamlit/secrets.toml`. `.env` is already listed in `.gitignore`; never commit your key.
 
@@ -130,12 +127,6 @@ Open the local URL shown in the terminal.
 - The app was reviewed by reading the code, not by running it.
 - If `GEMINI_API_KEY` is missing, the Gemini call fails and the generic fallback text is shown for every candidate.
 - Only PDF files are supported. Scanned (image-only) PDFs will return no text.
-
-## Known Issues to Fix in the Repository
-
-- `requirements.txt` is missing `google-generativeai`.
-- `requirements.txt` lists `scikit-learn`, `numpy` and `spacy`, which are not used in the code; they can be removed.
-- `io` is imported in `app.py` but never used.
 
 ## Future Enhancements
 
